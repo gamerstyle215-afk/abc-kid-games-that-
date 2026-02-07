@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium luxurious English learning app for children ages 3-7. Interactive ABC alphabet and 1-100 counting with engaging animations.">
+    <meta name="theme-color" content="#0d1117">
+    
+    <title>Luxury Kids ABC & Counting | Learn English 🌟</title>
+    
+    <!-- Google Fonts: Playfair Display (headings) & Montserrat (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="preload" as="style">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-decoration">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Home Menu Section -->
+        <section id="homeSection" class="section active">
+            <div class="home-content">
+                <h1 class="luxury-title">Luxury Kids Academy</h1>
+                <p class="subtitle">Learn English the Premium Way ✨</p>
+                
+                <div class="menu-cards">
+                    <button class="menu-card" onclick="navigateTo('abc')">
+                        <div class="menu-icon">🔤</div>
+                        <h2>Learn ABC</h2>
+                        <p>Letters A–Z with pronunciation</p>
+                    </button>
+                    
+                    <button class="menu-card" onclick="navigateTo('counting')">
+                        <div class="menu-icon">🔢</div>
+                        <h2>Count 1–100</h2>
+                        <p>Numbers with beautiful animations</p>
+                    </button>
+                </div>
+                
+                <p class="footer-note">Made with 💎 for young learners • Ages 3–7</p>
+            </div>
+        </section>
+
+        <!-- ABC Learning Section -->
+        <section id="abcSection" class="section">
+            <div class="section-header">
+                <button class="back-button" onclick="navigateTo('home')">← Back</button>
+                <h1>Learn the Alphabet 🔤</h1>
+                <p>Tap each letter to hear its name!</p>
+            </div>
+            
+            <div class="grid abc-grid" id="abcGrid">
+                <!-- Dynamically generated A-Z cards -->
+            </div>
+        </section>
+
+        <!-- Counting Section -->
+        <section id="countingSection" class="section">
+            <div class="section-header">
+                <button class="back-button" onclick="navigateTo('home')">← Back</button>
+                <h1>Count to 100 🔢</h1>
+                <p>Tap numbers to hear them pronounced!</p>
+            </div>
+            
+            <div class="grid counting-grid" id="countingGrid">
+                <!-- Dynamically generated 1-100 cards -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Reward Stars Container -->
+    <div id="starsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
